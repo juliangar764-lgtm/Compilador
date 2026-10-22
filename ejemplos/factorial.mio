@@ -1,0 +1,15 @@
+// Calcula el factorial de los números del 1 al 5
+funcion factorial(entero n) : entero {
+    si (n <= 1) {
+        regresa 1;
+    }
+    regresa n * factorial(n - 1);
+}
+
+funcion principal() {
+    entero i = 1;
+    mientras (i <= 5) {
+        imprimir(factorial(i));
+        i = i + 1;
+    }
+}

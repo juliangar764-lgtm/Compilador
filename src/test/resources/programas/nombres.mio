@@ -1,0 +1,28 @@
+// Nombres con acentos y ñ, y nombres que coinciden con registros o con 'main' de C
+funcion añoSiguiente(entero año) : entero {
+    regresa año + 1;
+}
+
+funcion rax(entero rbp) : entero {
+    regresa rbp * 2;
+}
+
+funcion main() : entero {
+    regresa 5;
+}
+
+funcion mi_funcion() : entero {
+    regresa 1;
+}
+
+funcion mi__funcion() : entero {
+    regresa 2;
+}
+
+funcion principal() {
+    entero número = añoSiguiente(2025);
+    imprimir(número);
+    imprimir(rax(21));
+    imprimir(main());
+    imprimir(mi_funcion() + mi__funcion() * 10);
+}

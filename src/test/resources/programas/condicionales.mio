@@ -1,0 +1,45 @@
+// si / sino si / sino, comparaciones y operadores lógicos con corto circuito
+funcion clasificar(entero n) : entero {
+    si (n < 0) {
+        regresa -1;
+    } sino si (n == 0) {
+        regresa 0;
+    } sino {
+        regresa 1;
+    }
+}
+
+// Imprime 100 cada vez que se ejecuta, para saber si se evaluó
+funcion avisar(booleano valor) : booleano {
+    imprimir(100);
+    regresa valor;
+}
+
+funcion principal() {
+    imprimir(clasificar(-5));
+    imprimir(clasificar(0));
+    imprimir(clasificar(8));
+
+    imprimir(3 < 5);
+    imprimir(3 > 5);
+    imprimir(5 <= 5);
+    imprimir(5 >= 6);
+    imprimir(4 != 4);
+    imprimir(verdadero == falso);
+    imprimir(no falso);
+    imprimir(verdadero y falso);
+    imprimir(falso o verdadero);
+
+    // Corto circuito: avisar() no se ejecuta en estas dos
+    imprimir(falso y avisar(verdadero));
+    imprimir(verdadero o avisar(falso));
+    // Aquí sí se ejecuta
+    imprimir(verdadero y avisar(verdadero));
+
+    si (1 + 1 == 2 y no (3 > 4)) {
+        imprimir(1);
+    }
+    si (falso) {
+        imprimir(999);
+    }
+}

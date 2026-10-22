@@ -1,0 +1,4 @@
+// El primer programa de cualquier lenguaje
+funcion principal() {
+    imprimir("¡Hola, mundo!");
+}

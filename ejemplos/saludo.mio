@@ -1,0 +1,20 @@
+// Textos: variables, concatenación y funciones que regresan texto
+funcion saludo(texto nombre, entero edad) : texto {
+    texto mensaje = "Hola, " + nombre + ". Tienes " + edad + " años";
+    si (edad >= 18) {
+        regresa mensaje + " y eres mayor de edad.";
+    }
+    regresa mensaje + " y eres menor de edad.";
+}
+
+funcion principal() {
+    imprimir(saludo("Ana", 20));
+    imprimir(saludo("Luis", 15));
+
+    texto linea;
+    para (entero i = 0; i < 10; i = i + 1) {
+        linea = linea + "=";
+    }
+    imprimir(linea);
+    imprimir("Fin del programa");
+}

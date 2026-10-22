@@ -1,0 +1,31 @@
+// Calculadora: lee dos números y una operación desde el teclado
+funcion calcular(decimal a, texto operacion, decimal b) : decimal {
+    si (operacion == "+") {
+        regresa a + b;
+    } sino si (operacion == "-") {
+        regresa a - b;
+    } sino si (operacion == "*") {
+        regresa a * b;
+    }
+    regresa a / b;
+}
+
+funcion esOperacionValida(texto op) : booleano {
+    regresa op == "+" o op == "-" o op == "*" o op == "/";
+}
+
+funcion principal() {
+    imprimir("=== Calculadora ===");
+    escribir("Primer número: ");
+    decimal a = leerDecimal();
+    escribir("Operación (+, -, *, /): ");
+    texto operacion = leerTexto();
+    escribir("Segundo número: ");
+    decimal b = leerDecimal();
+
+    si (no esOperacionValida(operacion)) {
+        imprimir("Operación no válida: " + operacion);
+        regresa;
+    }
+    imprimir(a + " " + operacion + " " + b + " = " + calcular(a, operacion, b));
+}

@@ -1,0 +1,19 @@
+// Operaciones aritméticas, precedencia y casos límite de los enteros de 64 bits
+funcion principal() {
+    imprimir(2 + 3 * 4);
+    imprimir((2 + 3) * 4);
+    imprimir(10 - 3 - 2);
+    imprimir(100 / 10 / 2);
+    imprimir(17 % 5);
+    imprimir(-7 / 2);       // la división trunca hacia cero, como en C
+    imprimir(-7 % 2);
+    imprimir(7 % -2);
+    imprimir(-(3 + 4));
+    imprimir(- -5);
+    imprimir(1000000 * 1000000);
+    imprimir(9223372036854775807);
+    imprimir(9223372036854775807 + 1);   // se desborda y da la vuelta al mínimo
+    entero minimo = -9223372036854775807 - 1;
+    imprimir(minimo / -1);  // en x86 'idiv' fallaría; el compilador lo maneja
+    imprimir(minimo % -1);
+}

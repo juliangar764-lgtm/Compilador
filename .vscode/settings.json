@@ -1,0 +1,4 @@
+{
+    // Recarga el proyecto automáticamente cuando cambia el pom.xml
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

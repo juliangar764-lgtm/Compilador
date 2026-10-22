@@ -1,0 +1,58 @@
+// Decimales: literales, operaciones mixtas con enteros, conversiones y casos especiales
+funcion promedio(decimal a, decimal b) : decimal {
+    regresa (a + b) / 2;
+}
+
+funcion areaCirculo(decimal radio) : decimal {
+    decimal pi = 3.141592653589793;
+    regresa pi * radio * radio;
+}
+
+funcion principal() {
+    imprimir(3.14);
+    imprimir(2.0);
+    imprimir(0.1 + 0.2);
+    imprimir(1.0 / 3);
+    imprimir(10.0 / 4);
+    imprimir(10 / 4);               // división entera
+    imprimir(decimal(10) / 4);
+    imprimir(7 / 2.0);
+    imprimir(-1.5 * 2);
+    imprimir(- -2.5);
+    imprimir(promedio(3, 4));       // los enteros se convierten al pasarlos
+    imprimir(areaCirculo(2));
+
+    decimal d = 5;
+    imprimir(d);
+    d = d / 2;
+    imprimir(d);
+    decimal sinValor;
+    imprimir(sinValor);
+
+    imprimir(entero(3.99));         // trunca
+    imprimir(entero(-3.99));
+    imprimir(entero("  42 ") + 1);
+    imprimir(decimal("-2.5") * 2);
+    imprimir(texto(1.5) + "!");
+    imprimir("Precio: $" + 19.99);
+
+    imprimir(1.5 < 2);
+    imprimir(2 >= 2.5);
+    imprimir(2 == 2.0);
+    imprimir(0.1 + 0.2 == 0.3);
+    imprimir(0.5 != 0.5);
+
+    imprimir(1.0 / 0.0);
+    imprimir(-1.0 / 0.0);
+    imprimir(0.0 / 0.0);
+    decimal nan = 0.0 / 0.0;
+    imprimir(nan == nan);           // NaN nunca es igual a nada
+    imprimir(nan < 1.0);
+    imprimir(nan != nan);
+
+    imprimir(1000000.0 * 1000000.0);
+    imprimir(100000000000000000000.0);
+    imprimir(0.000001);
+    imprimir(-0.0);
+    imprimir(123456789.125);
+}

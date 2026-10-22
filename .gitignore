@@ -1,0 +1,20 @@
+# Archivos generados por Maven
+target/
+
+# Ensamblador y ejecutables generados por el compilador
+salida/*
+!salida/.gitkeep
+
+# Archivos de IDEs
+.idea/
+*.iml
+nbproject/
+nbactions.xml
+.settings/
+.project
+.classpath
+
+# Sistema
+*.class
+*.log
+.DS_Store

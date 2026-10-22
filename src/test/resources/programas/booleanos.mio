@@ -1,0 +1,20 @@
+// Variables booleanas, valores por defecto y comparaciones entre booleanos
+funcion invertir(booleano b) : booleano {
+    regresa no b;
+}
+
+funcion principal() {
+    booleano listo = falso;
+    imprimir(listo);
+    listo = invertir(listo);
+    imprimir(listo);
+
+    booleano sinValor;
+    imprimir(sinValor);
+    entero cero;
+    imprimir(cero);
+
+    booleano mayorQueDiez = 15 > 10;
+    imprimir(mayorQueDiez == listo);
+    imprimir(no (listo o falso));
+}

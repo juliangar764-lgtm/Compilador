@@ -1,0 +1,20 @@
+// Imprime los números primos menores que 50
+funcion esPrimo(entero n) : booleano {
+    si (n < 2) {
+        regresa falso;
+    }
+    para (entero d = 2; d * d <= n; d = d + 1) {
+        si (n % d == 0) {
+            regresa falso;
+        }
+    }
+    regresa verdadero;
+}
+
+funcion principal() {
+    para (entero n = 2; n < 50; n = n + 1) {
+        si (esPrimo(n)) {
+            imprimir(n);
+        }
+    }
+}

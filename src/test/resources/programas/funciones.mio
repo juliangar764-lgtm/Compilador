@@ -1,0 +1,62 @@
+// Parámetros, recursión, recursión mutua y funciones sin valor de retorno
+funcion resta(entero a, entero b) : entero {
+    regresa a - b;
+}
+
+funcion fibonacci(entero n) : entero {
+    si (n < 2) {
+        regresa n;
+    }
+    regresa fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+funcion esPar(entero n) : booleano {
+    si (n == 0) {
+        regresa verdadero;
+    }
+    regresa esImpar(n - 1);
+}
+
+funcion esImpar(entero n) : booleano {
+    si (n == 0) {
+        regresa falso;
+    }
+    regresa esPar(n - 1);
+}
+
+funcion mayor(entero a, entero b, entero c) : entero {
+    entero m = a;
+    si (b > m) { m = b; }
+    si (c > m) { m = c; }
+    regresa m;
+}
+
+funcion imprimirHasta(entero n) {
+    si (n <= 0) {
+        regresa;
+    }
+    imprimirHasta(n - 1);
+    imprimir(n);
+}
+
+funcion potencia(entero base, entero exponente) : entero {
+    entero resultado = 1;
+    para (entero i = 0; i < exponente; i = i + 1) {
+        resultado = resultado * base;
+    }
+    regresa resultado;
+}
+
+funcion principal() {
+    imprimir(resta(10, 3));
+    imprimir(fibonacci(20));
+    imprimir(esPar(10));
+    imprimir(esImpar(7));
+    imprimir(esPar(7));
+    imprimir(mayor(3, 9, 5));
+    imprimir(mayor(resta(1, 2), resta(5, 1), 2));
+    imprimirHasta(3);
+    imprimir(potencia(2, 10));
+    imprimir(potencia(3, 0));
+    imprimir(resta(potencia(2, 3), fibonacci(5)) * 2);
+}

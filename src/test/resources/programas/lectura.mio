@@ -1,0 +1,26 @@
+// Lectura del teclado con leerTexto, leerEntero y leerDecimal, y escribir sin salto de línea
+funcion principal() {
+    escribir("¿Cómo te llamas? ");
+    texto nombre = leerTexto();
+    escribir("¿Cuántos años tienes? ");
+    entero edad = leerEntero();
+    escribir("¿Cuánto mides? ");
+    decimal estatura = leerDecimal();
+    imprimir("");
+    imprimir("Hola, " + nombre + ". Tienes " + edad + " años y mides " + estatura + " m.");
+    imprimir("En 10 años tendrás " + (edad + 10));
+
+    entero suma = 0;
+    para (entero i = 0; i < 3; i = i + 1) {
+        suma = suma + leerEntero();
+    }
+    imprimir("Suma: " + suma);
+
+    decimal precio = leerEntero();  // un entero leído se guarda como decimal
+    imprimir(precio);
+    escribir(1);
+    escribir(" + ");
+    escribir(1.5);
+    escribir(" = ");
+    imprimir(1 + 1.5);
+}

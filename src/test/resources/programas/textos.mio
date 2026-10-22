@@ -1,0 +1,42 @@
+// Textos: literales, escapes, variables, concatenación, conversión y comparación
+funcion saludo(texto nombre) : texto {
+    regresa "Hola, " + nombre + "!";
+}
+
+funcion repetir(texto t, entero veces) : texto {
+    texto resultado;
+    para (entero i = 0; i < veces; i = i + 1) {
+        resultado = resultado + t;
+    }
+    regresa resultado;
+}
+
+funcion principal() {
+    imprimir("Hola mundo");
+    imprimir("¡Acentos y eñes: año, canción!");
+    imprimir("Comillas: \"dentro\" y diagonal: \\");
+    imprimir("Línea 1\nLínea 2");
+    imprimir("a\tb");
+    imprimir("// esto no es un comentario");
+
+    texto nombre = "Ana";
+    imprimir(saludo(nombre));
+
+    entero x = 7;
+    imprimir("x = " + x);
+    imprimir("x * 2 = " + x * 2);
+    imprimir(1 + 2 + " es la suma");
+    imprimir("suma: " + 1 + 2);
+    imprimir("¿Es mayor? " + (x > 5));
+    imprimir("mínimo: " + (-9223372036854775807 - 1));
+    imprimir(repetir("ab", 3));
+
+    texto vacio;
+    imprimir(vacio == "");
+    imprimir(repetir("x", 0) == vacio);
+    imprimir("hola" == "hola");
+    imprimir("hola" != "Hola");
+    imprimir(saludo("Ana") == "Hola, Ana!");
+    imprimir("");
+    imprimir(vacio + "fin");
+}

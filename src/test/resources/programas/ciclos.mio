@@ -1,0 +1,54 @@
+// mientras y para: ciclos simples, anidados, sin partes y con variables internas
+funcion primerMultiplo(entero n, entero minimo) : entero {
+    entero k = n;
+    para (;;) {
+        si (k >= minimo) {
+            regresa k;
+        }
+        k = k + n;
+    }
+    regresa -1;
+}
+
+funcion principal() {
+    entero i = 0;
+    mientras (i < 3) {
+        imprimir(i);
+        i = i + 1;
+    }
+
+    entero suma = 0;
+    para (entero j = 1; j <= 100; j = j + 1) {
+        suma = suma + j;
+    }
+    imprimir(suma);
+
+    para (entero a = 1; a <= 3; a = a + 1) {
+        para (entero b = 1; b <= 2; b = b + 1) {
+            imprimir(a * 10 + b);
+        }
+    }
+
+    // La misma variable puede declararse otra vez en un ciclo separado
+    para (entero j = 0; j < 2; j = j + 1) {
+        imprimir(j);
+    }
+
+    // Una variable declarada dentro del ciclo empieza de nuevo en cada vuelta
+    para (entero r = 0; r < 3; r = r + 1) {
+        entero contador;
+        contador = contador + 1;
+        imprimir(contador);
+    }
+
+    para (; i < 5;) {
+        imprimir(i);
+        i = i + 1;
+    }
+
+    mientras (falso) {
+        imprimir(999);
+    }
+
+    imprimir(primerMultiplo(7, 20));
+}
